@@ -8,7 +8,9 @@ function App() {
   const [searchResults, setSearchResults] = useState('')
   const [pageCount, setPageCount] = useState()
 
-  // I needed help with how to best handle the data from the api call, so I referenced the codebase of an open source project where I am a core team member. I can talk through and explain the code I just needed support on the approach.
+  // I needed help with how to best handle the data from the api call,
+  // so I referenced the codebase of an open source project where I am a core team member.
+  // I can talk through and explain the code I just needed support on the approach.
 
   async function getUsers(e) {
     e.preventDefault()
