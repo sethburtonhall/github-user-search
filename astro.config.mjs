@@ -5,6 +5,8 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -14,5 +16,7 @@ export default defineConfig({
     }),
     alpinejs(),
   ],
+
   output: "server",
+  adapter: netlify(),
 });
