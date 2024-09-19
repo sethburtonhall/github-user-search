@@ -17,6 +17,6 @@ export default defineConfig({
     alpinejs(),
   ],
 
-  output: "server",
+  output: "hybrid",
   adapter: netlify(),
 });
