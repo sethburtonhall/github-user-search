@@ -2,9 +2,7 @@ import { cn } from "@/lib/utils";
 import {
   Pagination as BasePagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
