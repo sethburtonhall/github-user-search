@@ -1,30 +1,25 @@
 ---
 import "@/styles/globals.css";
 
-import daft1 from "@/public/daftpunktocat-thomas.gif";
-
 import Layout from "../layouts/Layout.astro";
-import { Input } from "@/components/ui/input";
+import { SearchInput } from "@/components/SearchInput";
 
 import Icon from "@/components/Icon.astro";
+
+import daft1 from "@/public/daftpunktocat-thomas.gif";
 ---
 
 <Layout title="GitHub Users Search">
   <div class="flex h-screen flex-col gap-8">
     <header class="bg-black p-4">
-      <div class="container mx-auto flex items-center gap-2">
-        <Icon icon="githubLogo" size="1.8em" color="white" />
-        <h1 class="text-xl font-bold text-white">GitHub User Search</h1>
-        <Input
-          type="search"
-          name="query"
-          placeholder="Search users on GitHub"
-          hx-get="/partials/users/results"
-          hx-trigger="keyup changed delay:300ms"
-          hx-target="#users-list"
-          hx-swap="innerHTML transition:true"
-          className="ml-auto max-w-sm"
-        />
+      <div
+        class="container mx-auto flex flex-col items-center gap-6 md:flex-row"
+      >
+        <div class="flex flex-col items-center gap-2 md:flex-row">
+          <Icon icon="githubLogo" size="1.8em" color="white" />
+          <h1 class="text-xl font-bold text-white">GitHub User Search</h1>
+        </div>
+        <SearchInput client:load />
       </div>
     </header>
 
